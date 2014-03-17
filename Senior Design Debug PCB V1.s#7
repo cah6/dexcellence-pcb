@@ -2883,7 +2883,7 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 <part name="VDD1" library="supply1" deviceset="VDD" device=""/>
 <part name="IMU_C2" library="eagle-ltspice" deviceset="C" device="" value="0.1 µF"/>
 <part name="SUPPLY25" library="supply2" deviceset="GND" device=""/>
-<part name="CL_C2" library="eagle-ltspice" deviceset="C" device="" value="10 uF"/>
+<part name="CL_C2" library="eagle-ltspice" deviceset="C" device="" value="0.1 uF"/>
 <part name="SUPPLY26" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -2921,8 +2921,8 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 <instance part="DC_C2" gate="G$1" x="299.72" y="152.4"/>
 <instance part="SUPPLY16" gate="GND" x="284.48" y="137.16"/>
 <instance part="SUPPLY17" gate="GND" x="299.72" y="137.16"/>
-<instance part="SCL_R" gate="G$1" x="246.38" y="147.32" rot="R90"/>
-<instance part="SDA_R" gate="G$1" x="241.3" y="147.32" rot="R90"/>
+<instance part="SCL_R" gate="G$1" x="246.38" y="142.24" rot="R90"/>
+<instance part="SDA_R" gate="G$1" x="241.3" y="142.24" rot="R90"/>
 <instance part="U2" gate="A" x="119.38" y="170.18"/>
 <instance part="U3" gate="A" x="119.38" y="198.12"/>
 <instance part="BQ_TS_R" gate="G$1" x="-60.96" y="205.74"/>
@@ -3219,16 +3219,6 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 <junction x="256.54" y="71.12"/>
 </segment>
 </net>
-<net name="SDA_9150" class="0">
-<segment>
-<wire x1="241.3" y1="119.38" x2="241.3" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="121.92" x2="241.3" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="SDA_R" gate="G$1" pin="1"/>
-<label x="241.3" y="127" size="1.778" layer="95" rot="R90"/>
-<pinref part="MPU-9150" gate="G$1" pin="SDA"/>
-<junction x="241.3" y="121.92"/>
-</segment>
-</net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="P0_0"/>
@@ -3311,7 +3301,7 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 <label x="233.68" y="248.92" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SDA_BLE113" class="0">
+<net name="SDA" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="SDA"/>
 <wire x1="251.46" y1="236.22" x2="198.12" y2="236.22" width="0.1524" layer="91"/>
@@ -3319,14 +3309,30 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 <wire x1="198.12" y1="236.22" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
 <pinref part="SDA_PU" gate="G$1" pin="1"/>
 </segment>
+<segment>
+<wire x1="241.3" y1="119.38" x2="241.3" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="121.92" x2="241.3" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="SDA_R" gate="G$1" pin="1"/>
+<label x="241.3" y="127" size="1.778" layer="95" rot="R90"/>
+<pinref part="MPU-9150" gate="G$1" pin="SDA"/>
+<junction x="241.3" y="121.92"/>
+</segment>
 </net>
-<net name="SCL_BLE113" class="0">
+<net name="SCL" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="SCL"/>
 <wire x1="205.74" y1="238.76" x2="251.46" y2="238.76" width="0.1524" layer="91"/>
 <label x="213.36" y="238.76" size="1.778" layer="95"/>
 <pinref part="SCL_PU" gate="G$1" pin="1"/>
 <wire x1="205.74" y1="238.76" x2="205.74" y2="243.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="246.38" y1="119.38" x2="246.38" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="SCL_R" gate="G$1" pin="1"/>
+<wire x1="246.38" y1="121.92" x2="246.38" y2="137.16" width="0.1524" layer="91"/>
+<label x="246.38" y="127" size="1.778" layer="95" rot="R90"/>
+<pinref part="MPU-9150" gate="G$1" pin="SCL"/>
+<junction x="246.38" y="121.92"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -3384,16 +3390,6 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 <pinref part="BQ24230" gate="A" pin="TMR"/>
 <wire x1="17.78" y1="182.88" x2="10.16" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="TMR_R" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="SCL_9150" class="0">
-<segment>
-<wire x1="246.38" y1="119.38" x2="246.38" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="SCL_R" gate="G$1" pin="1"/>
-<wire x1="246.38" y1="121.92" x2="246.38" y2="142.24" width="0.1524" layer="91"/>
-<label x="246.38" y="127" size="1.778" layer="95" rot="R90"/>
-<pinref part="MPU-9150" gate="G$1" pin="SCL"/>
-<junction x="246.38" y="121.92"/>
 </segment>
 </net>
 <net name="BLE_PWR" class="0">
@@ -3592,10 +3588,10 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 </segment>
 <segment>
 <pinref part="SDA_R" gate="G$1" pin="2"/>
-<wire x1="241.3" y1="152.4" x2="241.3" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="167.64" x2="246.38" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="147.32" x2="241.3" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="170.18" x2="246.38" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="SCL_R" gate="G$1" pin="2"/>
-<wire x1="246.38" y1="167.64" x2="246.38" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="170.18" x2="246.38" y2="147.32" width="0.1524" layer="91"/>
 <label x="241.3" y="154.94" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
