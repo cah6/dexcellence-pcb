@@ -868,6 +868,14 @@ design rules under a new name.</description>
 <attribute name="SPICEMODEL" value="NONE" x="63.5" y="80.01" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="63.5" y="80.01" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
+<element name="DC_C1" library="eagle-ltspice" package="C0805" value="1.0 µF " x="-57.15" y="46.99">
+<attribute name="SPICEMODEL" value="NONE" x="0" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="0" y="0" size="1.778" layer="27" display="off"/>
+</element>
+<element name="DC_C2" library="eagle-ltspice" package="C0805" value="0.1 µF" x="-64.77" y="46.99">
+<attribute name="SPICEMODEL" value="NONE" x="0" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="0" y="0" size="1.778" layer="27" display="off"/>
+</element>
 <element name="SCL_R" library="eagle-ltspice" package="R0805" value="10K" x="-19.05" y="46.99">
 <attribute name="SPICEMODEL" value="NONE" x="0" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="0" y="0" size="1.778" layer="27" display="off"/>
@@ -1032,6 +1040,8 @@ design rules under a new name.</description>
 <contactref element="MPU-9150" pad="1"/>
 <contactref element="MPU-9150" pad="11"/>
 <contactref element="MPU-9150" pad="9"/>
+<contactref element="DC_C1" pad="2"/>
+<contactref element="DC_C2" pad="2"/>
 <contactref element="TS_R" pad="1"/>
 <contactref element="BATT_CONN" pad="1"/>
 <contactref element="BATT_C" pad="2"/>
@@ -1046,6 +1056,8 @@ design rules under a new name.</description>
 <contactref element="U3" pad="2"/>
 <contactref element="U2" pad="2"/>
 <contactref element="SBC_OUT_SW" pad="1"/>
+<contactref element="BLE_C1" pad="2"/>
+<contactref element="BLE_C2" pad="2"/>
 <contactref element="TMR_R" pad="2"/>
 <contactref element="ISET_R" pad="1"/>
 <contactref element="BQ24230" pad="4"/>
@@ -1054,8 +1066,6 @@ design rules under a new name.</description>
 <contactref element="BQ24230" pad="15"/>
 <contactref element="IMU_C2" pad="2"/>
 <contactref element="CL_C2" pad="2"/>
-<contactref element="BLE_C1" pad="2"/>
-<contactref element="BLE_C2" pad="2"/>
 <wire x1="32.135" y1="11.8625" x2="38.985" y2="11.8625" width="0" layer="19" extent="1-1"/>
 <wire x1="32.135" y1="12.6625" x2="32.135" y2="11.8625" width="0" layer="19" extent="1-1"/>
 <wire x1="32.135" y1="13.4625" x2="32.135" y2="12.6625" width="0" layer="19" extent="1-1"/>
@@ -1095,8 +1105,10 @@ design rules under a new name.</description>
 <wire x1="-42.86" y1="46.99" x2="-35.24" y2="46.99" width="0" layer="19" extent="1-1"/>
 <wire x1="-44.77" y1="40.64" x2="-42.86" y2="46.99" width="0" layer="19" extent="1-1"/>
 <wire x1="-50.48" y1="46.99" x2="-42.86" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="-56.2" y1="46.99" x2="-50.48" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="-55.56" y1="40.64" x2="-56.2" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="-63.82" y1="46.99" x2="-56.2" y2="46.99" width="0" layer="19" extent="1-1"/>
 <wire x1="-49.21" y1="34.29" x2="-44.77" y2="40.64" width="0" layer="19" extent="1-1"/>
-<wire x1="-55.56" y1="40.64" x2="-50.48" y2="46.99" width="0" layer="19" extent="1-1"/>
 <wire x1="-24.45" y1="53.34" x2="-35.24" y2="46.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="EPAD">
@@ -1212,22 +1224,22 @@ design rules under a new name.</description>
 </signal>
 <signal name="BLE_PWR">
 <contactref element="U3" pad="5"/>
+<contactref element="BLE_C1" pad="1"/>
+<contactref element="BLE_C2" pad="1"/>
 <contactref element="SDA_PU" pad="2"/>
 <contactref element="SCL_PU" pad="2"/>
 <contactref element="U1" pad="DVDD"/>
 <contactref element="U1" pad="AVDD"/>
 <contactref element="CC_PROGRAMMER" pad="9"/>
 <contactref element="CC_PROGRAMMER" pad="2"/>
-<contactref element="BLE_C1" pad="1"/>
-<contactref element="BLE_C2" pad="1"/>
+<wire x1="29.21" y1="2.86" x2="17.5514" y2="13.3604" width="0" layer="19" extent="1-1"/>
+<wire x1="-19.37" y1="34.29" x2="29.21" y2="2.86" width="0" layer="19" extent="1-1"/>
+<wire x1="44.45" y1="11.43" x2="-19.37" y2="34.29" width="0" layer="19" extent="1-1"/>
 <wire x1="41.91" y1="1.27" x2="44.45" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="32.135" y1="3.8625" x2="41.91" y2="1.27" width="0" layer="19" extent="1-1"/>
-<wire x1="29.21" y1="2.86" x2="32.135" y2="3.8625" width="0" layer="19" extent="1-1"/>
-<wire x1="32.135" y1="11.0625" x2="32.135" y2="3.8625" width="0" layer="19" extent="1-1"/>
-<wire x1="29.21" y1="13.02" x2="32.135" y2="11.0625" width="0" layer="19" extent="1-1"/>
-<wire x1="17.5514" y1="13.3604" x2="29.21" y2="13.02" width="0" layer="19" extent="1-1"/>
-<wire x1="-19.37" y1="34.29" x2="17.5514" y2="13.3604" width="0" layer="19" extent="1-1"/>
-<wire x1="-38.42" y1="34.29" x2="-19.37" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="-38.42" y1="34.29" x2="41.91" y2="1.27" width="0" layer="19" extent="1-1"/>
+<wire x1="32.135" y1="11.0625" x2="44.45" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="32.135" y1="3.8625" x2="32.135" y2="11.0625" width="0" layer="19" extent="1-1"/>
+<wire x1="29.21" y1="13.02" x2="-38.42" y2="34.29" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="P02_LED" pad="C"/>
@@ -1291,15 +1303,19 @@ design rules under a new name.</description>
 <contactref element="MPU-9150" pad="8"/>
 <contactref element="MPU-9150" pad="3"/>
 <contactref element="IMU_C4" pad="2"/>
+<contactref element="DC_C1" pad="1"/>
+<contactref element="DC_C2" pad="1"/>
 <contactref element="SDA_R" pad="2"/>
 <contactref element="SCL_R" pad="2"/>
-<wire x1="20.86" y1="4.06" x2="15.0114" y2="15.9004" width="0" layer="19" extent="1-1"/>
-<wire x1="22.11" y1="1.835" x2="20.86" y2="4.06" width="0" layer="19" extent="1-1"/>
-<wire x1="24.86" y1="2.56" x2="22.11" y2="1.835" width="0" layer="19" extent="1-1"/>
-<wire x1="-18.1" y1="46.99" x2="15.0114" y2="15.9004" width="0" layer="19" extent="1-1"/>
 <wire x1="-26.99" y1="40.64" x2="-18.1" y2="46.99" width="0" layer="19" extent="1-1"/>
-<wire x1="-46.67" y1="40.64" x2="-26.99" y2="40.64" width="0" layer="19" extent="1-1"/>
-<wire x1="-62.55" y1="40.64" x2="-46.67" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="22.11" y1="1.835" x2="-26.99" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="20.86" y1="4.06" x2="22.11" y2="1.835" width="0" layer="19" extent="1-1"/>
+<wire x1="24.86" y1="2.56" x2="22.11" y2="1.835" width="0" layer="19" extent="1-1"/>
+<wire x1="-46.67" y1="40.64" x2="22.11" y2="1.835" width="0" layer="19" extent="1-1"/>
+<wire x1="-58.1" y1="46.99" x2="-46.67" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="-65.72" y1="46.99" x2="-58.1" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="-62.55" y1="40.64" x2="-65.72" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="15.0114" y1="15.9004" x2="-58.1" y2="46.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="U2" pad="1"/>
