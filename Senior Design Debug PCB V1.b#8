@@ -18,9 +18,9 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -829,15 +829,15 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="MPU-9150" library="mpu9150" package="MPU-9150" value="MPU-9150" x="22.86" y="3.81"/>
+<element name="MPU-9150" library="mpu9150" package="MPU-9150" value="MPU-9150" x="23.495" y="3.175"/>
 <element name="U1" library="sf-bluegiga" package="BLE113-A" value="BLE113-A-VISUAL" x="35.56" y="9.525"/>
-<element name="IMU_C3" library="eagle-ltspice" package="C0805" value="10 nF" x="20.32" y="1.905">
-<attribute name="SPICEMODEL" value="NONE" x="74.93" y="-38.735" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="74.93" y="-38.735" size="1.778" layer="27" display="off"/>
+<element name="IMU_C3" library="eagle-ltspice" package="C0805" value="10 nF" x="18.415" y="5.715">
+<attribute name="SPICEMODEL" value="NONE" x="73.025" y="-34.925" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="73.025" y="-34.925" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IMU_C1" library="eagle-ltspice" package="C0805" value="0.1 µF" x="17.145" y="1.905">
-<attribute name="SPICEMODEL" value="NONE" x="53.975" y="-38.735" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="53.975" y="-38.735" size="1.778" layer="27" display="off"/>
+<element name="IMU_C1" library="eagle-ltspice" package="C0805" value="0.1 µF" x="17.145" y="2.54" rot="R90">
+<attribute name="SPICEMODEL" value="NONE" x="57.785" y="39.37" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="57.785" y="39.37" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="P00_LED" library="eagle-ltspice" package="LED_1206" value="" x="33.02" y="1.27" rot="MR0">
 <attribute name="SPICEMODEL" value="NONE" x="1.27" y="-57.15" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -849,52 +849,47 @@ design rules under a new name.</description>
 <attribute name="SPICETYPE" value="diode" x="80.01" y="59.69" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="80.01" y="59.69" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="P02_LED" library="eagle-ltspice" package="LED_1206" value="" x="2.54" y="0.635">
-<attribute name="SPICEMODEL" value="NONE" x="54.61" y="-57.785" size="1.778" layer="27" display="off"/>
-<attribute name="SPICETYPE" value="diode" x="54.61" y="-57.785" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="D" x="54.61" y="-57.785" size="1.778" layer="27" display="off"/>
-</element>
 <element name="CC_PROGRAMMER" library="con-lstb" package="MA05-2" value="" x="43.18" y="6.35" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="68.58" y="30.48" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="68.58" y="30.48" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="68.58" y="30.48" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="68.58" y="30.48" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="BLE_C2" library="eagle-ltspice" package="C0805" value="4.7 uF" x="29.845" y="3.81" rot="R270">
-<attribute name="SPICEMODEL" value="NONE" x="-10.795" y="-15.24" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="-10.795" y="-15.24" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="BLE_C2" library="eagle-ltspice" package="C0805" value="4.7 uF" x="29.845" y="3.175" rot="R270">
+<attribute name="SPICEMODEL" value="NONE" x="-10.795" y="-15.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="-10.795" y="-15.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="BLE_C1" library="eagle-ltspice" package="C0805" value="4.7 uF" x="29.845" y="12.7" rot="R90">
 <attribute name="SPICEMODEL" value="NONE" x="64.135" y="78.74" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="64.135" y="78.74" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="U2" library="TLV70033" package="DCK5" value="TLV70033_DCK_5" x="17.78" y="3.81">
-<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/TLV70033" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="PIN_COUNT" value="5" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="GENERIC_PART_NUMBER" value="TLV70033" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="200mA, Low IQ, Low Dropout Regulator for Portables" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="FAMILY_NAME" value="SINGLE CHANNEL LDO" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Texas Instruments" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="INDUSTRY_STD_PKG_TYPE" value="SC70" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="VENDOR" value="Texas Instruments" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="tlv70033_dck_5" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE_DESIGNATOR" value="DCK" x="77.47" y="-59.69" size="1.778" layer="27" display="off"/>
+<element name="U2" library="TLV70033" package="DCK5" value="TLV70033_DCK_5" x="14.605" y="2.54" rot="R270">
+<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/TLV70033" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PIN_COUNT" value="5" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="GENERIC_PART_NUMBER" value="TLV70033" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DESCRIPTION" value="200mA, Low IQ, Low Dropout Regulator for Portables" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="FAMILY_NAME" value="SINGLE CHANNEL LDO" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="Texas Instruments" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="INDUSTRY_STD_PKG_TYPE" value="SC70" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VENDOR" value="Texas Instruments" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="tlv70033_dck_5" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGE_DESIGNATOR" value="DCK" x="-48.895" y="-57.15" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U3" library="TLV70033" package="DCK5" value="TLV70033_DCK_5" x="24.765" y="14.605">
-<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/TLV70033" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="PIN_COUNT" value="5" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="GENERIC_PART_NUMBER" value="TLV70033" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="200mA, Low IQ, Low Dropout Regulator for Portables" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="FAMILY_NAME" value="SINGLE CHANNEL LDO" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Texas Instruments" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="INDUSTRY_STD_PKG_TYPE" value="SC70" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="VENDOR" value="Texas Instruments" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="tlv70033_dck_5" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE_DESIGNATOR" value="DCK" x="50.165" y="-53.975" size="1.778" layer="27" display="off"/>
+<element name="U3" library="TLV70033" package="DCK5" value="TLV70033_DCK_5" x="24.13" y="15.875">
+<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/TLV70033" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="PIN_COUNT" value="5" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="GENERIC_PART_NUMBER" value="TLV70033" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="200mA, Low IQ, Low Dropout Regulator for Portables" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="FAMILY_NAME" value="SINGLE CHANNEL LDO" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Texas Instruments" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="INDUSTRY_STD_PKG_TYPE" value="SC70" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="VENDOR" value="Texas Instruments" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="tlv70033_dck_5" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE_DESIGNATOR" value="DCK" x="49.53" y="-52.705" size="1.778" layer="27" display="off"/>
 </element>
-<element name="TS_R" library="eagle-ltspice" package="R0805" value="10K" x="8.89" y="13.97">
-<attribute name="SPICEMODEL" value="NONE" x="72.39" y="-8.89" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="72.39" y="-8.89" size="1.778" layer="27" display="off"/>
+<element name="TS_R" library="eagle-ltspice" package="R0805" value="10K" x="10.16" y="11.43">
+<attribute name="SPICEMODEL" value="NONE" x="73.66" y="-11.43" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="73.66" y="-11.43" size="1.778" layer="27" display="off"/>
 </element>
 <element name="BATT_CONN" library="con-amp-quick" package="02P" value="" x="2.54" y="15.24" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="-20.32" y="-25.4" size="1.778" layer="27" rot="R270" display="off"/>
@@ -902,55 +897,51 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-20.32" y="-25.4" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-20.32" y="-25.4" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="BATT_C" library="eagle-ltspice" package="C0805" value="" x="5.715" y="15.24" rot="R90">
-<attribute name="SPICEMODEL" value="NONE" x="69.215" y="43.18" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="69.215" y="43.18" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="BATT_C" library="eagle-ltspice" package="C0805" value="" x="6.35" y="15.24" rot="R90">
+<attribute name="SPICEMODEL" value="NONE" x="69.85" y="43.18" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="69.85" y="43.18" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="PGOOD_LED" library="eagle-ltspice" package="LED_1206" value="" x="8.89" y="14.605">
-<attribute name="SPICEMODEL" value="NONE" x="69.85" y="-37.465" size="1.778" layer="27" display="off"/>
-<attribute name="SPICETYPE" value="diode" x="69.85" y="-37.465" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="D" x="69.85" y="-37.465" size="1.778" layer="27" display="off"/>
+<element name="PGOOD_LED" library="eagle-ltspice" package="LED_1206" value="" x="5.715" y="1.27">
+<attribute name="SPICEMODEL" value="NONE" x="66.675" y="-50.8" size="1.778" layer="27" display="off"/>
+<attribute name="SPICETYPE" value="diode" x="66.675" y="-50.8" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="D" x="66.675" y="-50.8" size="1.778" layer="27" display="off"/>
 </element>
-<element name="PGOOD_R" library="eagle-ltspice" package="R0805" value="1K" x="8.89" y="14.605">
-<attribute name="SPICEMODEL" value="NONE" x="62.23" y="-8.255" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="62.23" y="-8.255" size="1.778" layer="27" display="off"/>
+<element name="PGOOD_R" library="eagle-ltspice" package="R0805" value="1K" x="6.985" y="3.81">
+<attribute name="SPICEMODEL" value="NONE" x="60.325" y="-19.05" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="60.325" y="-19.05" size="1.778" layer="27" display="off"/>
 </element>
-<element name="CHG_LED" library="eagle-ltspice" package="LED_1206" value="" x="8.255" y="14.605">
-<attribute name="SPICEMODEL" value="NONE" x="29.845" y="-43.815" size="1.778" layer="27" display="off"/>
-<attribute name="SPICETYPE" value="diode" x="29.845" y="-43.815" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="D" x="29.845" y="-43.815" size="1.778" layer="27" display="off"/>
+<element name="CHG_LED" library="eagle-ltspice" package="LED_1206" value="" x="10.795" y="1.27" rot="R180">
+<attribute name="SPICEMODEL" value="NONE" x="-10.795" y="59.69" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="SPICETYPE" value="diode" x="-10.795" y="59.69" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="SPICEPREFIX" value="D" x="-10.795" y="59.69" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="CHG_R" library="eagle-ltspice" package="R0805" value="1K" x="8.89" y="14.605">
-<attribute name="SPICEMODEL" value="NONE" x="66.04" y="-19.685" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="66.04" y="-19.685" size="1.778" layer="27" display="off"/>
+<element name="CHG_R" library="eagle-ltspice" package="R0805" value="1K" x="11.43" y="3.81">
+<attribute name="SPICEMODEL" value="NONE" x="68.58" y="-30.48" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="68.58" y="-30.48" size="1.778" layer="27" display="off"/>
 </element>
-<element name="OUT_C1" library="eagle-ltspice" package="C0805" value="4.7 uF" x="22.86" y="8.255">
-<attribute name="SPICEMODEL" value="NONE" x="71.12" y="-26.035" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="71.12" y="-26.035" size="1.778" layer="27" display="off"/>
+<element name="OUT_C1" library="eagle-ltspice" package="C0805" value="4.7 uF" x="15.24" y="8.89" rot="R90">
+<attribute name="SPICEMODEL" value="NONE" x="49.53" y="57.15" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="49.53" y="57.15" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="USB_C" library="eagle-ltspice" package="C0805" value="4.7 uF" x="6.35" y="7.62" rot="R270">
 <attribute name="SPICEMODEL" value="NONE" x="-27.94" y="-22.86" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="-27.94" y="-22.86" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="TMR_R" library="eagle-ltspice" package="R0805" value="" x="9.525" y="13.97">
-<attribute name="SPICEMODEL" value="NONE" x="28.575" y="-49.53" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="28.575" y="-49.53" size="1.778" layer="27" display="off"/>
+<element name="TMR_R" library="eagle-ltspice" package="R0805" value="" x="10.16" y="16.51" rot="R180">
+<attribute name="SPICEMODEL" value="NONE" x="-8.89" y="80.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="-8.89" y="80.01" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="ISET_R" library="eagle-ltspice" package="R0805" value="" x="8.255" y="13.97">
-<attribute name="SPICEMODEL" value="NONE" x="69.215" y="-44.45" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="69.215" y="-44.45" size="1.778" layer="27" display="off"/>
+<element name="ISET_R" library="eagle-ltspice" package="R0805" value="" x="10.16" y="13.97">
+<attribute name="SPICEMODEL" value="NONE" x="71.12" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="71.12" y="-44.45" size="1.778" layer="27" display="off"/>
 </element>
-<element name="SDA_PU" library="eagle-ltspice" package="R0805" value="10K" x="28.575" y="6.985">
-<attribute name="SPICEMODEL" value="NONE" x="48.895" y="-27.305" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="48.895" y="-27.305" size="1.778" layer="27" display="off"/>
+<element name="SDA_PU" library="eagle-ltspice" package="R0805" value="10K" x="21.59" y="12.7">
+<attribute name="SPICEMODEL" value="NONE" x="41.91" y="-21.59" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="41.91" y="-21.59" size="1.778" layer="27" display="off"/>
 </element>
-<element name="SCL_PU" library="eagle-ltspice" package="R0805" value="10K" x="28.575" y="9.525">
-<attribute name="SPICEMODEL" value="NONE" x="67.945" y="-24.765" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="67.945" y="-24.765" size="1.778" layer="27" display="off"/>
-</element>
-<element name="P02_R" library="eagle-ltspice" package="R0805" value="1K" x="2.54" y="1.27">
-<attribute name="SPICEMODEL" value="NONE" x="52.07" y="-45.72" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="52.07" y="-45.72" size="1.778" layer="27" display="off"/>
+<element name="SCL_PU" library="eagle-ltspice" package="R0805" value="10K" x="26.035" y="12.7">
+<attribute name="SPICEMODEL" value="NONE" x="65.405" y="-21.59" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="65.405" y="-21.59" size="1.778" layer="27" display="off"/>
 </element>
 <element name="P01_R" library="eagle-ltspice" package="R0805" value="1K" x="35.56" y="8.255" rot="MR0">
 <attribute name="SPICEMODEL" value="NONE" x="-6.35" y="-38.735" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -960,44 +951,46 @@ design rules under a new name.</description>
 <attribute name="SPICEMODEL" value="NONE" x="1.27" y="-41.275" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="1.27" y="-41.275" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="CURR_LIM" library="TPS22945" package="DCK5" value="TPS22945_DCK_5" x="17.78" y="14.605">
-<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/TPS22945" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="PIN_COUNT" value="5" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="GENERIC_PART_NUMBER" value="TPS22945" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="Low-Input Voltage Current Limited Load Switch with Shut-Off and Auto-Restart Features" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="FAMILY_NAME" value="CURRENT LIMITED SWITCH" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Texas Instruments" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="INDUSTRY_STD_PKG_TYPE" value="SC70" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="VENDOR" value="Texas Instruments" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="tps22945_dck_5" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE_DESIGNATOR" value="DCK" x="60.96" y="-48.895" size="1.778" layer="27" display="off"/>
+<element name="CURR_LIM" library="TPS22945" package="DCK5" value="TPS22945_DCK_5" x="15.24" y="13.335" smashed="yes" rot="R180">
+<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/TPS22945" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PIN_COUNT" value="5" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="GENERIC_PART_NUMBER" value="TPS22945" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DESCRIPTION" value="Low-Input Voltage Current Limited Load Switch with Shut-Off and Auto-Restart Features" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="FAMILY_NAME" value="CURRENT LIMITED SWITCH" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER" value="Texas Instruments" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="INDUSTRY_STD_PKG_TYPE" value="SC70" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VENDOR" value="Texas Instruments" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="tps22945_dck_5" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PACKAGE_DESIGNATOR" value="DCK" x="-27.94" y="76.835" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="18.1102" y="13.97" size="1.27" layer="25" ratio="6" rot="SR180"/>
+<attribute name="VALUE" x="18.6944" y="13.97" size="1.27" layer="27" ratio="6" rot="SR180"/>
 </element>
-<element name="CL_R1" library="eagle-ltspice" package="R0805" value="100 K" x="16.51" y="15.875">
-<attribute name="SPICEMODEL" value="NONE" x="43.18" y="-31.115" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="43.18" y="-31.115" size="1.778" layer="27" display="off"/>
+<element name="CL_R1" library="eagle-ltspice" package="R0805" value="100 K" x="14.605" y="15.875">
+<attribute name="SPICEMODEL" value="NONE" x="41.275" y="-31.115" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="41.275" y="-31.115" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IMU_C4" library="eagle-ltspice" package="C0805" value="4.7 uF" x="15.24" y="3.175">
-<attribute name="SPICEMODEL" value="NONE" x="78.74" y="-37.465" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="78.74" y="-37.465" size="1.778" layer="27" display="off"/>
+<element name="IMU_C4" library="eagle-ltspice" package="C0805" value="4.7 uF" x="19.685" y="2.54" rot="R270">
+<attribute name="SPICEMODEL" value="NONE" x="-20.955" y="-60.96" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="-20.955" y="-60.96" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="BQ24230" library="BQ24230" package="RGT16_1P7X1P7" value="BQ24230_RGT_16" x="12.7" y="8.89">
-<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/BQ24230" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
-<attribute name="PIN_COUNT" value="16" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
-<attribute name="GENERIC_PART_NUMBER" value="BQ24230" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="USB Friendly 0.5A Li+ Charger w/ Dynamic Power Management, 6.6V OVP" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
-<attribute name="FAMILY_NAME" value="BATTERY CHARGE MANAGEMENT" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Texas Instruments" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
-<attribute name="INDUSTRY_STD_PKG_TYPE" value="QFN" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE_DESIGNATOR" value="RGT" x="58.42" y="-43.18" size="1.778" layer="27" display="off"/>
+<element name="BQ24230" library="BQ24230" package="RGT16_1P7X1P7" value="BQ24230_RGT_16" x="10.795" y="7.62">
+<attribute name="DATASHEETURL" value="http://www.ti.com/lit/gpn/BQ24230" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="PIN_COUNT" value="16" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="GENERIC_PART_NUMBER" value="BQ24230" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="USB Friendly 0.5A Li+ Charger w/ Dynamic Power Management, 6.6V OVP" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="FAMILY_NAME" value="BATTERY CHARGE MANAGEMENT" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Texas Instruments" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="INDUSTRY_STD_PKG_TYPE" value="QFN" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE_DESIGNATOR" value="RGT" x="56.515" y="-44.45" size="1.778" layer="27" display="off"/>
 </element>
 <element name="SBC_OUT_SW" library="SparkFun-Electromechanical" package="SWITCH-SPDT" value="" x="22.86" y="8.89" rot="R90"/>
-<element name="IMU_C2" library="eagle-ltspice" package="C0805" value="0.1 µF" x="16.51" y="3.81">
-<attribute name="SPICEMODEL" value="NONE" x="62.23" y="-36.83" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="62.23" y="-36.83" size="1.778" layer="27" display="off"/>
+<element name="IMU_C2" library="eagle-ltspice" package="C0805" value="0.1 µF" x="27.305" y="3.175" rot="R90">
+<attribute name="SPICEMODEL" value="NONE" x="67.945" y="48.895" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="67.945" y="48.895" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="CL_C2" library="eagle-ltspice" package="C0805" value="0.1 uF" x="17.145" y="15.875">
-<attribute name="SPICEMODEL" value="NONE" x="42.545" y="-37.465" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="42.545" y="-37.465" size="1.778" layer="27" display="off"/>
+<element name="CL_C2" library="eagle-ltspice" package="C0805" value="0.1 uF" x="19.05" y="15.875" rot="R180">
+<attribute name="SPICEMODEL" value="NONE" x="-6.35" y="69.215" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="-6.35" y="69.215" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="USB_INPUT" library="SparkFun-Connectors" package="USB-B-MICRO-SMD_V03" value="USB_MICROB_PLUGCONN-11752" x="1.27" y="7.62">
 <attribute name="PROD_ID" value="CONN-11752" x="55.88" y="2.54" size="1.778" layer="27" display="off"/>
@@ -1031,7 +1024,6 @@ design rules under a new name.</description>
 <contactref element="OUT_C1" pad="1"/>
 <contactref element="P00_R" pad="1"/>
 <contactref element="P01_R" pad="1"/>
-<contactref element="P02_R" pad="1"/>
 <contactref element="CURR_LIM" pad="2"/>
 <contactref element="USB_C" pad="2"/>
 <contactref element="USB_INPUT" pad="GND1"/>
@@ -1048,11 +1040,38 @@ design rules under a new name.</description>
 <contactref element="CL_C2" pad="2"/>
 <contactref element="BLE_C1" pad="2"/>
 <contactref element="BLE_C2" pad="2"/>
-<wire x1="36.51" y1="8.255" x2="38.985" y2="11.8625" width="0" layer="19" extent="1-1"/>
-<wire x1="36.51" y1="5.715" x2="36.51" y2="8.255" width="0" layer="19" extent="1-1"/>
-<wire x1="32.135" y1="3.0625" x2="36.51" y2="5.715" width="0" layer="19" extent="1-1"/>
-<wire x1="29.845" y1="2.86" x2="32.135" y2="3.0625" width="0" layer="19" extent="1-1"/>
-<wire x1="32.135" y1="11.8625" x2="36.51" y2="8.255" width="0" layer="19" extent="1-1"/>
+<contactref element="IMU_C4" pad="1"/>
+<wire x1="36.51" y1="8.255" x2="38.985" y2="11.8625" width="0" layer="19" extent="1-16"/>
+<wire x1="36.51" y1="5.715" x2="36.51" y2="8.255" width="0" layer="19" extent="16-16"/>
+<wire x1="38.985" y1="3.0625" x2="36.51" y2="5.715" width="0" layer="19" extent="1-16"/>
+<wire x1="32.135" y1="3.0625" x2="36.51" y2="5.715" width="0" layer="19" extent="1-16"/>
+<wire x1="29.845" y1="2.225" x2="32.135" y2="3.0625" width="0" layer="19" extent="1-1"/>
+<wire x1="27.305" y1="4.125" x2="29.845" y2="2.225" width="0" layer="19" extent="1-1"/>
+<wire x1="25.495" y1="3.925" x2="27.305" y2="4.125" width="0" layer="19" extent="1-1"/>
+<wire x1="25.495" y1="4.425" x2="25.495" y2="3.925" width="0" layer="19" extent="1-1"/>
+<wire x1="25.495" y1="2.925" x2="25.495" y2="3.925" width="0" layer="19" extent="1-1"/>
+<wire x1="24.245" y1="1.2" x2="25.495" y2="2.925" width="0" layer="19" extent="1-1"/>
+<wire x1="23.245" y1="1.2" x2="24.245" y2="1.2" width="0" layer="19" extent="1-1"/>
+<wire x1="21.495" y1="4.425" x2="23.245" y2="1.2" width="0" layer="19" extent="1-1"/>
+<wire x1="19.685" y1="3.49" x2="21.495" y2="4.425" width="0" layer="19" extent="1-1"/>
+<wire x1="17.145" y1="3.49" x2="19.685" y2="3.49" width="0" layer="19" extent="1-1"/>
+<wire x1="17.465" y1="5.715" x2="17.145" y2="3.49" width="0" layer="19" extent="1-1"/>
+<wire x1="15.24" y1="7.94" x2="17.465" y2="5.715" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="8.89" x2="15.24" y2="7.94" width="0" layer="19" extent="1-1"/>
+<wire x1="11.557" y1="6.1468" x2="17.465" y2="5.715" width="0" layer="19" extent="1-1"/>
+<wire x1="10.541" y1="6.1468" x2="11.557" y2="6.1468" width="0" layer="19" extent="1-1"/>
+<wire x1="10.033" y1="6.1468" x2="10.541" y2="6.1468" width="0" layer="19" extent="1-1"/>
+<wire x1="9.3218" y1="6.858" x2="10.033" y2="6.1468" width="0" layer="19" extent="1-1"/>
+<wire x1="10.541" y1="9.0932" x2="9.3218" y2="6.858" width="0" layer="19" extent="1-1"/>
+<wire x1="14.605" y1="3.5814" x2="10.033" y2="6.1468" width="0" layer="19" extent="1-1"/>
+<wire x1="9.21" y1="11.43" x2="10.541" y2="9.0932" width="0" layer="19" extent="1-1"/>
+<wire x1="9.21" y1="13.97" x2="9.21" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="9.21" y1="16.51" x2="9.21" y2="13.97" width="0" layer="19" extent="1-1"/>
+<wire x1="6.35" y1="16.19" x2="9.21" y2="16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="16.51" x2="6.35" y2="16.19" width="0" layer="19" extent="1-1"/>
+<wire x1="6.35" y1="6.67" x2="9.3218" y2="6.858" width="0" layer="19" extent="1-1"/>
+<wire x1="3.97" y1="6.32" x2="6.35" y2="6.67" width="0" layer="19" extent="1-1"/>
+<wire x1="32.135" y1="11.8625" x2="36.51" y2="8.255" width="0" layer="19" extent="1-16"/>
 <wire x1="32.135" y1="12.6625" x2="32.135" y2="11.8625" width="0" layer="19" extent="1-1"/>
 <wire x1="32.135" y1="13.4625" x2="32.135" y2="12.6625" width="0" layer="19" extent="1-1"/>
 <wire x1="32.135" y1="14.2625" x2="32.135" y2="13.4625" width="0" layer="19" extent="1-1"/>
@@ -1060,36 +1079,10 @@ design rules under a new name.</description>
 <wire x1="32.135" y1="15.8625" x2="32.135" y2="15.0625" width="0" layer="19" extent="1-1"/>
 <wire x1="32.135" y1="16.6625" x2="32.135" y2="15.8625" width="0" layer="19" extent="1-1"/>
 <wire x1="29.845" y1="13.65" x2="32.135" y2="13.4625" width="0" layer="19" extent="1-1"/>
-<wire x1="24.86" y1="3.56" x2="29.845" y2="2.86" width="0" layer="19" extent="1-1"/>
-<wire x1="24.86" y1="4.56" x2="24.86" y2="3.56" width="0" layer="19" extent="1-1"/>
-<wire x1="24.86" y1="5.06" x2="24.86" y2="4.56" width="0" layer="19" extent="1-1"/>
-<wire x1="23.61" y1="1.835" x2="24.86" y2="3.56" width="0" layer="19" extent="1-1"/>
-<wire x1="22.61" y1="1.835" x2="23.61" y2="1.835" width="0" layer="19" extent="1-1"/>
-<wire x1="19.37" y1="1.905" x2="22.61" y2="1.835" width="0" layer="19" extent="1-1"/>
-<wire x1="18.095" y1="1.905" x2="19.37" y2="1.905" width="0" layer="19" extent="1-1"/>
-<wire x1="17.46" y1="3.81" x2="18.095" y2="1.905" width="0" layer="19" extent="1-1"/>
-<wire x1="16.7386" y1="3.81" x2="17.46" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="20.86" y1="5.06" x2="19.37" y2="1.905" width="0" layer="19" extent="1-1"/>
-<wire x1="21.91" y1="8.255" x2="20.86" y2="5.06" width="0" layer="19" extent="1-1"/>
-<wire x1="20.32" y1="8.89" x2="21.91" y2="8.255" width="0" layer="19" extent="1-1"/>
-<wire x1="13.462" y1="7.4168" x2="16.7386" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="12.446" y1="7.4168" x2="13.462" y2="7.4168" width="0" layer="19" extent="1-1"/>
-<wire x1="11.938" y1="7.4168" x2="12.446" y2="7.4168" width="0" layer="19" extent="1-1"/>
-<wire x1="11.2268" y1="8.128" x2="11.938" y2="7.4168" width="0" layer="19" extent="1-1"/>
-<wire x1="12.446" y1="10.3632" x2="11.2268" y2="8.128" width="0" layer="19" extent="1-1"/>
-<wire x1="10.475" y1="13.97" x2="12.446" y2="10.3632" width="0" layer="19" extent="1-1"/>
-<wire x1="7.94" y1="13.97" x2="10.475" y2="13.97" width="0" layer="19" extent="1-1"/>
-<wire x1="7.305" y1="13.97" x2="7.94" y2="13.97" width="0" layer="19" extent="1-1"/>
-<wire x1="5.715" y1="16.19" x2="7.305" y2="13.97" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="16.51" x2="5.715" y2="16.19" width="0" layer="19" extent="1-1"/>
-<wire x1="6.35" y1="6.67" x2="11.2268" y2="8.128" width="0" layer="19" extent="1-1"/>
-<wire x1="3.97" y1="6.32" x2="6.35" y2="6.67" width="0" layer="19" extent="1-1"/>
-<wire x1="1.59" y1="1.27" x2="3.97" y2="6.32" width="0" layer="19" extent="1-1"/>
-<wire x1="38.985" y1="3.0625" x2="36.51" y2="5.715" width="0" layer="19" extent="1-1"/>
+<wire x1="23.0886" y1="15.875" x2="29.845" y2="13.65" width="0" layer="19" extent="1-1"/>
+<wire x1="16.2814" y1="13.335" x2="10.541" y2="9.0932" width="0" layer="19" extent="1-1"/>
+<wire x1="18.1" y1="15.875" x2="16.2814" y2="13.335" width="0" layer="19" extent="1-1"/>
 <wire x1="44.45" y1="1.27" x2="38.985" y2="3.0625" width="0" layer="19" extent="1-1"/>
-<wire x1="16.7386" y1="14.605" x2="12.446" y2="10.3632" width="0" layer="19" extent="1-1"/>
-<wire x1="18.095" y1="15.875" x2="16.7386" y2="14.605" width="0" layer="19" extent="1-1"/>
-<wire x1="23.7236" y1="14.605" x2="18.095" y2="15.875" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="EPAD">
 <contactref element="BQ24230" pad="17"/>
@@ -1097,31 +1090,24 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="IMU_C3" pad="2"/>
 <contactref element="MPU-9150" pad="20"/>
-<wire x1="21.27" y1="1.905" x2="23.61" y2="5.785" width="0" layer="19" extent="1-1"/>
+<wire x1="19.365" y1="5.715" x2="24.245" y2="5.15" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="IMU_C1" pad="1"/>
 <contactref element="MPU-9150" pad="10"/>
-<wire x1="16.195" y1="1.905" x2="23.11" y2="1.835" width="0" layer="19" extent="1-1"/>
+<wire x1="17.145" y1="1.59" x2="23.745" y2="1.2" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="U1" pad="P0_0"/>
 <contactref element="P00_LED" pad="A"/>
-<wire x1="34.442" y1="1.27" x2="38.985" y2="9.4625" width="0" layer="19" extent="1-1"/>
+<wire x1="34.442" y1="1.27" x2="38.985" y2="9.4625" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$9">
 <contactref element="U1" pad="P0_1"/>
 <contactref element="P01_LED" pad="A"/>
-<wire x1="36.678" y1="1.27" x2="38.985" y2="8.6625" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$10">
-<contactref element="U1" pad="P0_2"/>
-<contactref element="P02_LED" pad="A"/>
-<wire x1="1.118" y1="0.635" x2="38.985" y2="7.8625" width="0" layer="19" extent="1-1"/>
+<wire x1="36.678" y1="1.27" x2="38.985" y2="8.6625" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="VDD">
-<contactref element="PGOOD_R" pad="2"/>
-<contactref element="CHG_R" pad="2"/>
 <contactref element="CURR_LIM" pad="4"/>
 <contactref element="BQ24230" pad="10"/>
 <contactref element="BQ24230" pad="11"/>
@@ -1130,14 +1116,17 @@ design rules under a new name.</description>
 <contactref element="U3" pad="3"/>
 <contactref element="U2" pad="3"/>
 <contactref element="U1" pad="RESET"/>
+<contactref element="CHG_LED" pad="A"/>
+<contactref element="PGOOD_LED" pad="A"/>
 <wire x1="25.4" y1="8.89" x2="38.985" y2="10.2625" width="0" layer="19" extent="1-1"/>
-<wire x1="23.81" y1="8.255" x2="25.4" y2="8.89" width="0" layer="19" extent="1-1"/>
-<wire x1="23.7236" y1="13.9446" x2="25.4" y2="8.89" width="0" layer="19" extent="1-1"/>
-<wire x1="18.8214" y1="13.9446" x2="23.7236" y2="13.9446" width="0" layer="19" extent="1-1"/>
-<wire x1="14.1732" y1="9.144" x2="18.8214" y2="13.9446" width="0" layer="19" extent="1-1"/>
-<wire x1="14.1732" y1="8.636" x2="14.1732" y2="9.144" width="0" layer="19" extent="1-1"/>
-<wire x1="16.7386" y1="3.1496" x2="14.1732" y2="8.636" width="0" layer="19" extent="1-1"/>
-<wire x1="9.84" y1="14.605" x2="14.1732" y2="9.144" width="0" layer="19" extent="1-1"/>
+<wire x1="23.0886" y1="15.2146" x2="25.4" y2="8.89" width="0" layer="19" extent="1-1"/>
+<wire x1="14.1986" y1="13.9954" x2="23.0886" y2="15.2146" width="0" layer="19" extent="1-1"/>
+<wire x1="15.24" y1="9.84" x2="14.1986" y2="13.9954" width="0" layer="19" extent="1-1"/>
+<wire x1="12.2682" y1="7.874" x2="15.24" y2="9.84" width="0" layer="19" extent="1-1"/>
+<wire x1="12.2682" y1="7.366" x2="12.2682" y2="7.874" width="0" layer="19" extent="1-1"/>
+<wire x1="13.9446" y1="3.5814" x2="12.2682" y2="7.366" width="0" layer="19" extent="1-1"/>
+<wire x1="12.217" y1="1.27" x2="13.9446" y2="3.5814" width="0" layer="19" extent="1-1"/>
+<wire x1="4.293" y1="1.27" x2="12.217" y2="1.27" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="P2_1">
 <contactref element="CC_PROGRAMMER" pad="4"/>
@@ -1148,54 +1137,39 @@ design rules under a new name.</description>
 <contactref element="U1" pad="SDA"/>
 <contactref element="SDA_PU" pad="1"/>
 <contactref element="MPU-9150" pad="24"/>
-<wire x1="27.625" y1="6.985" x2="32.135" y2="5.4625" width="0" layer="19" extent="1-1"/>
-<wire x1="21.61" y1="5.785" x2="27.625" y2="6.985" width="0" layer="19" extent="1-1"/>
+<wire x1="22.245" y1="5.15" x2="32.135" y2="5.4625" width="0" layer="19" extent="1-1"/>
+<wire x1="20.64" y1="12.7" x2="22.245" y2="5.15" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL">
 <contactref element="U1" pad="SCL"/>
 <contactref element="SCL_PU" pad="1"/>
 <contactref element="MPU-9150" pad="23"/>
-<wire x1="22.11" y1="5.785" x2="32.135" y2="6.2625" width="0" layer="19" extent="1-1"/>
-<wire x1="27.625" y1="9.525" x2="22.11" y2="5.785" width="0" layer="19" extent="1-1"/>
+<wire x1="22.745" y1="5.15" x2="25.085" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="32.135" y1="6.2625" x2="25.085" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$17">
 <contactref element="TS_R" pad="2"/>
 <contactref element="BQ24230" pad="1"/>
-<wire x1="11.2268" y1="9.652" x2="9.84" y2="13.97" width="0" layer="19" extent="1-1"/>
+<wire x1="9.3218" y1="8.382" x2="11.11" y2="11.43" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$19">
 <contactref element="BATT_C" pad="1"/>
 <contactref element="BATT_CONN" pad="2"/>
 <contactref element="BQ24230" pad="2"/>
 <contactref element="BQ24230" pad="3"/>
-<wire x1="2.54" y1="13.97" x2="5.715" y2="14.29" width="0" layer="19" extent="1-1"/>
-<wire x1="11.2268" y1="9.144" x2="5.715" y2="14.29" width="0" layer="19" extent="1-1"/>
-<wire x1="11.2268" y1="8.636" x2="11.2268" y2="9.144" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="13.97" x2="6.35" y2="14.29" width="0" layer="19" extent="1-1"/>
+<wire x1="9.3218" y1="7.874" x2="6.35" y2="14.29" width="0" layer="19" extent="1-1"/>
+<wire x1="9.3218" y1="7.366" x2="9.3218" y2="7.874" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$22">
-<contactref element="PGOOD_LED" pad="C"/>
 <contactref element="BQ24230" pad="7"/>
-<wire x1="12.954" y1="7.4168" x2="10.312" y2="14.605" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$23">
-<contactref element="PGOOD_LED" pad="A"/>
 <contactref element="PGOOD_R" pad="1"/>
-<wire x1="7.468" y1="14.605" x2="7.94" y2="14.605" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$24">
-<contactref element="CHG_LED" pad="C"/>
-<contactref element="BQ24230" pad="9"/>
-<wire x1="14.1732" y1="8.128" x2="9.677" y2="14.605" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$25">
-<contactref element="CHG_LED" pad="A"/>
-<contactref element="CHG_R" pad="1"/>
-<wire x1="6.833" y1="14.605" x2="7.94" y2="14.605" width="0" layer="19" extent="1-1"/>
+<wire x1="6.035" y1="3.81" x2="11.049" y2="6.1468" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$31">
 <contactref element="BQ24230" pad="14"/>
 <contactref element="TMR_R" pad="1"/>
-<wire x1="8.575" y1="13.97" x2="12.954" y2="10.3632" width="0" layer="19" extent="1-1"/>
+<wire x1="11.049" y1="9.0932" x2="11.11" y2="16.51" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BLE_PWR">
 <contactref element="U3" pad="5"/>
@@ -1209,56 +1183,51 @@ design rules under a new name.</description>
 <contactref element="BLE_C2" pad="1"/>
 <wire x1="41.91" y1="1.27" x2="44.45" y2="11.43" width="0" layer="19" extent="1-1"/>
 <wire x1="32.135" y1="3.8625" x2="41.91" y2="1.27" width="0" layer="19" extent="1-1"/>
-<wire x1="29.845" y1="4.76" x2="32.135" y2="3.8625" width="0" layer="19" extent="1-1"/>
-<wire x1="32.135" y1="11.0625" x2="29.845" y2="4.76" width="0" layer="19" extent="1-1"/>
+<wire x1="29.845" y1="4.125" x2="32.135" y2="3.8625" width="0" layer="19" extent="1-1"/>
+<wire x1="32.135" y1="11.0625" x2="32.135" y2="3.8625" width="0" layer="19" extent="1-1"/>
 <wire x1="29.845" y1="11.75" x2="32.135" y2="11.0625" width="0" layer="19" extent="1-1"/>
-<wire x1="29.525" y1="6.985" x2="29.845" y2="11.75" width="0" layer="19" extent="1-1"/>
-<wire x1="29.525" y1="9.525" x2="29.525" y2="6.985" width="0" layer="19" extent="1-1"/>
-<wire x1="25.8064" y1="15.2654" x2="29.525" y2="6.985" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$4">
-<contactref element="P02_LED" pad="C"/>
-<contactref element="P02_R" pad="2"/>
-<wire x1="3.49" y1="1.27" x2="3.962" y2="0.635" width="0" layer="19" extent="1-1"/>
+<wire x1="26.985" y1="12.7" x2="29.845" y2="11.75" width="0" layer="19" extent="1-1"/>
+<wire x1="22.54" y1="12.7" x2="26.985" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="25.1714" y1="16.5354" x2="22.54" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
 <contactref element="P01_LED" pad="C"/>
 <contactref element="P01_R" pad="2"/>
-<wire x1="39.522" y1="1.27" x2="34.61" y2="8.255" width="0" layer="19" extent="1-1"/>
+<wire x1="39.522" y1="1.27" x2="34.61" y2="8.255" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$14">
 <contactref element="P00_LED" pad="C"/>
 <contactref element="P00_R" pad="2"/>
-<wire x1="31.598" y1="1.27" x2="34.61" y2="5.715" width="0" layer="19" extent="1-1"/>
+<wire x1="31.598" y1="1.27" x2="34.61" y2="5.715" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$29">
 <contactref element="CL_R1" pad="1"/>
 <contactref element="CURR_LIM" pad="5"/>
 <contactref element="SBC_OUT_SW" pad="2"/>
-<wire x1="15.56" y1="15.875" x2="18.8214" y2="15.2654" width="0" layer="19" extent="1-1"/>
-<wire x1="22.86" y1="8.89" x2="18.8214" y2="15.2654" width="0" layer="19" extent="1-1"/>
+<wire x1="14.1986" y1="12.6746" x2="22.86" y2="8.89" width="0" layer="19" extent="1-1"/>
+<wire x1="13.655" y1="15.875" x2="14.1986" y2="12.6746" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="CURR_LIM" pad="3"/>
 <contactref element="CL_R1" pad="2"/>
-<wire x1="16.7386" y1="13.9446" x2="17.46" y2="15.875" width="0" layer="19" extent="1-1"/>
+<wire x1="16.2814" y1="13.9954" x2="15.555" y2="15.875" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="BQ24230" pad="16"/>
 <contactref element="ISET_R" pad="2"/>
-<wire x1="9.205" y1="13.97" x2="11.938" y2="10.3632" width="0" layer="19" extent="1-1"/>
+<wire x1="10.033" y1="9.0932" x2="11.11" y2="13.97" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DC_IN">
 <contactref element="BQ24230" pad="13"/>
 <contactref element="USB_C" pad="1"/>
 <contactref element="USB_INPUT" pad="VBUS1"/>
-<wire x1="6.35" y1="8.57" x2="13.462" y2="10.3632" width="0" layer="19" extent="1-1"/>
+<wire x1="6.35" y1="8.57" x2="11.557" y2="9.0932" width="0" layer="19" extent="1-1"/>
 <wire x1="3.97" y1="8.92" x2="6.35" y2="8.57" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="INT">
 <contactref element="MPU-9150" pad="12"/>
 <contactref element="U1" pad="P1_2"/>
-<wire x1="24.11" y1="1.835" x2="35.96" y2="2.8125" width="0" layer="19" extent="1-1"/>
+<wire x1="24.745" y1="1.2" x2="35.96" y2="2.8125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RESET">
 <contactref element="CC_PROGRAMMER" pad="7"/>
@@ -1268,9 +1237,6 @@ design rules under a new name.</description>
 <contactref element="U1" pad="P2_2"/>
 <wire x1="32.135" y1="10.2625" x2="44.45" y2="3.81" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$5">
-<contactref element="IMU_C4" pad="1"/>
-</signal>
 <signal name="IMU_PWR">
 <contactref element="MPU-9150" pad="13"/>
 <contactref element="IMU_C2" pad="1"/>
@@ -1278,20 +1244,35 @@ design rules under a new name.</description>
 <contactref element="MPU-9150" pad="8"/>
 <contactref element="MPU-9150" pad="3"/>
 <contactref element="IMU_C4" pad="2"/>
-<wire x1="22.11" y1="1.835" x2="24.86" y2="2.56" width="0" layer="19" extent="1-1"/>
-<wire x1="20.86" y1="4.06" x2="22.11" y2="1.835" width="0" layer="19" extent="1-1"/>
-<wire x1="18.8214" y1="4.4704" x2="20.86" y2="4.06" width="0" layer="19" extent="1-1"/>
-<wire x1="16.19" y1="3.175" x2="18.8214" y2="4.4704" width="0" layer="19" extent="1-1"/>
-<wire x1="15.56" y1="3.81" x2="16.19" y2="3.175" width="0" layer="19" extent="1-1"/>
+<wire x1="27.305" y1="2.225" x2="25.495" y2="1.925" width="0" layer="19" extent="1-1"/>
+<wire x1="22.745" y1="1.2" x2="25.495" y2="1.925" width="0" layer="19" extent="1-1"/>
+<wire x1="21.495" y1="3.425" x2="22.745" y2="1.2" width="0" layer="19" extent="1-1"/>
+<wire x1="19.685" y1="1.59" x2="21.495" y2="3.425" width="0" layer="19" extent="1-1"/>
+<wire x1="15.2654" y1="1.4986" x2="19.685" y2="1.59" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="U2" pad="1"/>
 <contactref element="U3" pad="1"/>
 <contactref element="CURR_LIM" pad="1"/>
 <contactref element="CL_C2" pad="1"/>
-<wire x1="16.7386" y1="15.2654" x2="23.7236" y2="15.2654" width="0" layer="19" extent="1-1"/>
-<wire x1="16.195" y1="15.875" x2="16.7386" y2="15.2654" width="0" layer="19" extent="1-1"/>
-<wire x1="16.7386" y1="4.4704" x2="16.7386" y2="15.2654" width="0" layer="19" extent="1-1"/>
+<wire x1="20" y1="15.875" x2="23.0886" y2="16.5354" width="0" layer="19" extent="1-1"/>
+<wire x1="16.2814" y1="12.6746" x2="20" y2="15.875" width="0" layer="19" extent="1-1"/>
+<wire x1="15.2654" y1="3.5814" x2="16.2814" y2="12.6746" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$4">
+<contactref element="CHG_R" pad="2"/>
+<contactref element="CHG_LED" pad="C"/>
+<wire x1="9.373" y1="1.27" x2="12.38" y2="3.81" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$5">
+<contactref element="BQ24230" pad="9"/>
+<contactref element="CHG_R" pad="1"/>
+<wire x1="10.48" y1="3.81" x2="12.2682" y2="6.858" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$6">
+<contactref element="PGOOD_R" pad="2"/>
+<contactref element="PGOOD_LED" pad="C"/>
+<wire x1="7.137" y1="1.27" x2="7.935" y2="3.81" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

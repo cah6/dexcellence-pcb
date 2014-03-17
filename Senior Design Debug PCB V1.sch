@@ -3515,8 +3515,6 @@ Comes in a variety of packages.  Check out Hirose's ZX-x0 line: http://www.hiros
 </sheets>
 <errors>
 <approved hash="204,1,10.16,190.5,BQ24230,EPAD,,,,"/>
-<approved hash="206,1,10.16,172.72,N$26,,,,,"/>
-<approved hash="206,1,10.16,175.26,N$26,,,,,"/>
 </errors>
 </schematic>
 </drawing>
